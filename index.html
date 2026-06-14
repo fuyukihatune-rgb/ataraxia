@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Ataraxia Works</title>
+  <meta name="description" content="複数性とともに生きる人のための、小さくてプライベートな道具をつくっています。Mosaic と Shift。" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta property="og:title" content="Ataraxia Works" />
+  <meta property="og:description" content="複数性とともに生きる人のための、小さくてプライベートな道具。Mosaic と Shift。" />
+  <meta property="og:type" content="website" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f9f9f9;
+      --surface: #ffffff;
+      --border: #e8e8e8;
+      --border-light: #f2f2f2;
+      --text: #1a1a1a;
+      --text-2: #555;
+      --text-3: #888;
+      --text-4: #bbb;
+      --text-5: #ddd;
+      --accent: #1a1a1a;
+      --accent-strong: #1a1a1a;
+      --accent-soft: #f0f0f0;
+      --shadow: 0 1px 2px rgba(0,0,0,0.03), 0 3px 10px rgba(0,0,0,0.04);
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    html, body { background: var(--bg); color: var(--text); font-family: -apple-system, "Helvetica Neue", "Noto Sans JP", sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+    body { padding: calc(40px + var(--safe-top)) 18px calc(40px + var(--safe-bottom)); }
+    .wrap { max-width: 640px; margin: 0 auto; }
+
+    /* ── Hero ── */
+    .hero { text-align: center; margin-bottom: 32px; }
+    .hero-logo { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-strong); }
+    .hero-tagline { font-size: 14px; color: var(--text-3); margin-top: 8px; }
+
+    /* ── Card ── */
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; margin-bottom: 14px; box-shadow: var(--shadow); }
+    .intro { font-size: 14px; color: var(--text-2); line-height: 1.85; }
+    .intro strong { color: var(--text); font-weight: 700; }
+
+    /* ── Section heading ── */
+    .apps-head { font-size: 13px; font-weight: 700; color: var(--text-3); letter-spacing: 0.04em; margin: 26px 4px 12px; }
+
+    /* ── App card ── */
+    .app-card { display: flex; gap: 16px; align-items: flex-start; }
+    .app-icon { width: 60px; height: 60px; flex-shrink: 0; border-radius: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+    .app-body { flex: 1; min-width: 0; }
+    .app-name { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; }
+    .app-kicker { font-size: 12px; color: var(--text-4); margin-top: 1px; }
+    .app-desc { font-size: 13px; color: var(--text-2); line-height: 1.75; margin-top: 8px; }
+    .app-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+    .tag { font-size: 11px; color: var(--text-3); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; }
+    .app-open { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; background: var(--text); color: #fff; text-decoration: none; border-radius: 12px; padding: 10px 18px; font-size: 13px; font-weight: 700; transition: transform 0.1s, opacity 0.15s; }
+    .app-open:active { transform: translateY(1px); }
+    .app-open .arrow { font-size: 14px; }
+
+    /* ── Pair note ── */
+    .pair { display: flex; align-items: center; gap: 10px; justify-content: center; margin: 4px 0 8px; color: var(--text-4); font-size: 12px; }
+    .pair .line { height: 1px; background: var(--border); flex: 1; max-width: 80px; }
+
+    /* ── Footer ── */
+    footer { text-align: center; margin-top: 30px; color: var(--text-4); font-size: 11px; line-height: 1.9; }
+    footer a { color: var(--text-3); text-decoration: none; border-bottom: 1px solid var(--border); }
+
+    @media (max-width: 380px) {
+      .app-card { gap: 12px; }
+      .app-icon { width: 52px; height: 52px; }
+      .hero-logo { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="hero-logo">Ataraxia Works</div>
+      <p class="hero-tagline">心の平静（アタラクシア）に、そっと寄り添う道具を。</p>
+    </header>
+
+    <section class="card intro">
+      DID・OSDD など、<strong>複数性とともに生きる人</strong>のための小さな道具をつくっています。<br>
+      記録はすべて<strong>あなたの端末の中だけ</strong>。広告も、追跡も、ログインもありません。すべて無料で、オフラインでも動きます。
+    </section>
+
+    <div class="apps-head">つくっているもの</div>
+
+    <section class="card app-card">
+      <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Mosaic">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <g fill="#ffffff">
+          <circle cx="25" cy="20" r="5.4"/><circle cx="39" cy="20" r="5.4"/>
+          <circle cx="25" cy="32" r="5.4"/><circle cx="39" cy="32" r="5.4"/>
+          <circle cx="25" cy="44" r="5.4"/><circle cx="39" cy="44" r="5.4"/>
+        </g>
+      </svg>
+      <div class="app-body">
+        <div class="app-name">Mosaic</div>
+        <div class="app-kicker">過去の記録・感情のタイムライン</div>
+        <p class="app-desc">「何があったか」を、人格ごとにやさしく書きとめるメモアプリ。気分や写真もいっしょに残せて、カレンダーや検索で振り返れます。</p>
+        <div class="app-tags"><span class="tag">タイムライン</span><span class="tag">完全プライベート</span><span class="tag">PWA</span></div>
+        <a class="app-open" href="https://mosaic.xdcyw.net" target="_blank" rel="noopener">Mosaic を開く <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <div class="pair"><span class="line"></span>対になって、システムの「今」と「過去」を支えます<span class="line"></span></div>
+
+    <section class="card app-card">
+      <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Shift">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <g fill="#ffffff" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+          <polygon points="16,22 40,22 40,18 50,25 40,32 40,28 16,28"/>
+          <polygon points="48,36 24,36 24,32 14,39 24,46 24,42 48,42"/>
+        </g>
+      </svg>
+      <div class="app-body">
+        <div class="app-name">Shift</div>
+        <div class="app-kicker">今のフロント管理・申し送り</div>
+        <p class="app-desc">「今だれがフロントにいるか」を記録し、交代の履歴を残せるアプリ。人格どうしのメッセージ（申し送り）も送れます。Mosaic の人格情報をそのまま引き継げます。</p>
+        <div class="app-tags"><span class="tag">フロント管理</span><span class="tag">申し送り</span><span class="tag">PWA</span></div>
+        <a class="app-open" href="https://shift.xdcyw.net" target="_blank" rel="noopener">Shift を開く <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <footer>
+      Ataraxia Works<br>
+      開発：田中志（たなかしるす） · <a href="https://x.com/Sirusu_Tanaka" target="_blank" rel="noopener">X</a><br>
+      © 2026 田中志 / Ataraxia Works
+    </footer>
+  </main>
+</body>
+</html>
