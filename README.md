@@ -11,6 +11,8 @@
   - **Anchor** … 制御の二分法で頭の中を整える（ストア派） → https://anchor.xdcyw.net
   - **Scale** … 司法/予備の学習記録・科目バランス → https://scale.xdcyw.net
   - **Ember** … 責めない喫煙記録（本数・きっかけ・在庫） → https://ember.xdcyw.net
+- 運営しているプラットフォーム
+  - **Empowerment Society X (ESX)** … 自由で開かれた言論プラットフォーム → https://esx.xdcyw.net
 
 ## デプロイ（Cloudflare Pages）
 
