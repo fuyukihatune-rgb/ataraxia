@@ -54,9 +54,12 @@
     .app-desc { font-size: 13px; color: var(--text-2); line-height: 1.75; margin-top: 8px; }
     .app-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
     .tag { font-size: 11px; color: var(--text-3); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; }
-    .app-open { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; background: var(--text); color: #fff; text-decoration: none; border-radius: 12px; padding: 10px 18px; font-size: 13px; font-weight: 700; transition: transform 0.1s, opacity 0.15s; }
+    .app-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+    .app-open { display: inline-flex; align-items: center; gap: 6px; background: var(--text); color: #fff; text-decoration: none; border-radius: 12px; padding: 10px 18px; font-size: 13px; font-weight: 700; transition: transform 0.1s, opacity 0.15s; }
     .app-open:active { transform: translateY(1px); }
     .app-open .arrow { font-size: 14px; }
+    .app-apk { display: inline-flex; align-items: center; gap: 5px; background: transparent; color: var(--text-3); text-decoration: none; border: 1px solid var(--border); border-radius: 12px; padding: 9px 14px; font-size: 12px; font-weight: 600; transition: transform 0.1s, opacity 0.15s; }
+    .app-apk:active { transform: translateY(1px); }
 
     /* ── Pair note ── */
     .pair { display: flex; align-items: center; gap: 10px; justify-content: center; margin: 4px 0 8px; color: var(--text-4); font-size: 12px; }
@@ -101,7 +104,10 @@
         <div class="app-kicker">過去の記録・感情のタイムライン</div>
         <p class="app-desc">「何があったか」を、人格ごとにやさしく書きとめるメモアプリ。気分や写真もいっしょに残せて、カレンダーや検索で振り返れます。</p>
         <div class="app-tags"><span class="tag">タイムライン</span><span class="tag">完全プライベート</span><span class="tag">PWA</span></div>
-        <a class="app-open" href="https://mosaic.xdcyw.net" target="_blank" rel="noopener">Mosaic を開く <span class="arrow">→</span></a>
+        <div class="app-actions">
+          <a class="app-open" href="https://mosaic.xdcyw.net" target="_blank" rel="noopener">Mosaic を開く <span class="arrow">→</span></a>
+          <a class="app-apk" href="https://github.com/fuyukihatune-rgb/mosaic/raw/main/mosaic.apk" download>Android APK ↓</a>
+        </div>
       </div>
     </section>
 
@@ -120,7 +126,10 @@
         <div class="app-kicker">今のフロント管理・申し送り</div>
         <p class="app-desc">「今だれがフロントにいるか」を記録し、交代の履歴を残せるアプリ。人格どうしのメッセージ（申し送り）も送れます。Mosaic の人格情報をそのまま引き継げます。</p>
         <div class="app-tags"><span class="tag">フロント管理</span><span class="tag">申し送り</span><span class="tag">PWA</span></div>
-        <a class="app-open" href="https://shift.xdcyw.net" target="_blank" rel="noopener">Shift を開く <span class="arrow">→</span></a>
+        <div class="app-actions">
+          <a class="app-open" href="https://shift.xdcyw.net" target="_blank" rel="noopener">Shift を開く <span class="arrow">→</span></a>
+          <a class="app-apk" href="https://github.com/fuyukihatune-rgb/shift/raw/main/shift.apk" download>Android APK ↓</a>
+        </div>
       </div>
     </section>
 
@@ -141,7 +150,10 @@
         <div class="app-kicker">呼吸とグラウンディング</div>
         <p class="app-desc">呼吸ガイドと 5-4-3-2-1 グラウンディングで、ざわついた気持ちを「今ここ」にそっと戻すアプリ。だれでも使えて、つらいときの小さなお守りに。</p>
         <div class="app-tags"><span class="tag">呼吸ガイド</span><span class="tag">グラウンディング</span><span class="tag">PWA</span></div>
-        <a class="app-open" href="https://still.xdcyw.net" target="_blank" rel="noopener">Still を開く <span class="arrow">→</span></a>
+        <div class="app-actions">
+          <a class="app-open" href="https://still.xdcyw.net" target="_blank" rel="noopener">Still を開く <span class="arrow">→</span></a>
+          <a class="app-apk" href="https://github.com/fuyukihatune-rgb/still/raw/main/still.apk" download>Android APK ↓</a>
+        </div>
       </div>
     </section>
 
@@ -166,7 +178,10 @@
         <div class="app-kicker">思考から、鎮める</div>
         <p class="app-desc">気になることを書き出して、自分の手の中にあること／手の外にあることに仕分ける。手放せるものは手放し、動かせることには小さな一手をひとつ。ストア派の「制御の二分法」を、責めない道具に。</p>
         <div class="app-tags"><span class="tag">思考の整理</span><span class="tag">ストア派</span><span class="tag">PWA</span></div>
-        <a class="app-open" href="https://anchor.xdcyw.net" target="_blank" rel="noopener">Anchor を開く <span class="arrow">→</span></a>
+        <div class="app-actions">
+          <a class="app-open" href="https://anchor.xdcyw.net" target="_blank" rel="noopener">Anchor を開く <span class="arrow">→</span></a>
+          <a class="app-apk" href="https://github.com/fuyukihatune-rgb/anchor/raw/main/anchor.apk" download>Android APK ↓</a>
+        </div>
       </div>
     </section>
 
@@ -193,7 +208,10 @@
         <div class="app-kicker">学習記録・科目バランス</div>
         <p class="app-desc">司法試験・予備試験の学習時間を科目ごとに記録し、勉強のバランスや過去問の進み具合を見える化するアプリ。タイマーで計って、今日の頑張りはXにシェアもできます。</p>
         <div class="app-tags"><span class="tag">学習記録</span><span class="tag">科目バランス</span><span class="tag">PWA</span></div>
-        <a class="app-open" href="https://scale.xdcyw.net" target="_blank" rel="noopener">Scale を開く <span class="arrow">→</span></a>
+        <div class="app-actions">
+          <a class="app-open" href="https://scale.xdcyw.net" target="_blank" rel="noopener">Scale を開く <span class="arrow">→</span></a>
+          <a class="app-apk" href="https://github.com/fuyukihatune-rgb/scale/raw/main/scale.apk" download>Android APK ↓</a>
+        </div>
       </div>
     </section>
 
@@ -212,7 +230,10 @@
         <div class="app-kicker">喫煙記録</div>
         <p class="app-desc">禁煙アプリはあるけれど「ただ記録したい」人の道具は意外とない。責めず急かさず、吸った一本をワンタップで記録。きっかけ・満足度・在庫（あと何本）・コストまで把握できます。</p>
         <div class="app-tags"><span class="tag">喫煙記録</span><span class="tag">在庫管理</span><span class="tag">PWA</span></div>
-        <a class="app-open" href="https://ember.xdcyw.net" target="_blank" rel="noopener">Ember を開く <span class="arrow">→</span></a>
+        <div class="app-actions">
+          <a class="app-open" href="https://ember.xdcyw.net" target="_blank" rel="noopener">Ember を開く <span class="arrow">→</span></a>
+          <a class="app-apk" href="https://github.com/fuyukihatune-rgb/Ember/raw/main/ember.apk" download>Android APK ↓</a>
+        </div>
       </div>
     </section>
 
@@ -231,7 +252,10 @@
         <div class="app-kicker">今日の色相</div>
         <p class="app-desc">7つの質問に答えると、今日の心の状態を「色相」という色で映し出します。澄んでいるか、少し濁っているか。結果はカード画像にして X にシェアできます。毎日記録すると月のカラーグリッドで振り返れます。</p>
         <div class="app-tags"><span class="tag">セルフチェック</span><span class="tag">色相</span><span class="tag">PWA</span></div>
-        <a class="app-open" href="https://hue.xdcyw.net" target="_blank" rel="noopener">Hue を開く <span class="arrow">→</span></a>
+        <div class="app-actions">
+          <a class="app-open" href="https://hue.xdcyw.net" target="_blank" rel="noopener">Hue を開く <span class="arrow">→</span></a>
+          <a class="app-apk" href="https://github.com/fuyukihatune-rgb/hue/raw/main/hue.apk" download>Android APK ↓</a>
+        </div>
       </div>
     </section>
 
