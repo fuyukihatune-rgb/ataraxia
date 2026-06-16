@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>制作実績 — Ataraxia Works</title>
+  <meta name="description" content="Ataraxia Works の制作実績。自社開発のPWA・Webアプリ12本を掲載しています。" />
+  <meta name="theme-color" content="#f9f9f9" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f9f9f9; --surface: #fff; --border: #e8e8e8; --border-light: #f2f2f2;
+      --text: #1a1a1a; --text-2: #555; --text-3: #888; --text-4: #bbb;
+      --accent: #1a1a1a; --accent-soft: #f0f0f0;
+      --shadow: 0 1px 2px rgba(0,0,0,0.03), 0 3px 10px rgba(0,0,0,0.04);
+      --shadow-hover: 0 2px 6px rgba(0,0,0,0.05), 0 14px 32px rgba(0,0,0,0.09);
+    }
+    html { scroll-behavior: smooth; }
+    html, body { background: var(--bg); color: var(--text); font-family: -apple-system, "Helvetica Neue", "Noto Sans JP", sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+    body { padding: 40px 18px 64px; }
+    .wrap { max-width: 680px; margin: 0 auto; }
+
+    .back { display: inline-block; font-size: 13px; color: var(--text-3); text-decoration: none; margin-bottom: 28px; }
+    .back:hover { color: var(--text); }
+
+    .page-head { margin-bottom: 8px; }
+    .page-title { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; }
+    .page-sub { font-size: 14px; color: var(--text-3); margin-top: 6px; margin-bottom: 32px; }
+
+    .section-label { font-size: 11px; font-weight: 700; color: var(--text-4); letter-spacing: 0.1em; text-transform: uppercase; margin: 36px 0 14px; display: flex; align-items: center; gap: 10px; }
+    .section-label::after { content: ""; flex: 1; height: 1px; background: var(--border-light); }
+
+    /* ── Work card ── */
+    .work-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 22px; margin-bottom: 14px; box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: grid; grid-template-columns: 56px 1fr; gap: 18px; align-items: start;
+    }
+    @media (hover: hover) { .work-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); } }
+    .work-icon { width: 56px; height: 56px; border-radius: 13px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.05); flex-shrink: 0; }
+    .work-body { min-width: 0; }
+    .work-name { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; }
+    .work-kicker { font-size: 12px; color: var(--text-3); margin-top: 2px; margin-bottom: 10px; }
+    .work-what { font-size: 13.5px; color: var(--text-2); line-height: 1.75; margin-bottom: 12px; }
+    .work-meta { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+    .tag { font-size: 11px; background: var(--accent-soft); color: var(--text-3); padding: 3px 8px; border-radius: 5px; }
+    .tag.tech { background: #eef2ff; color: #4b5ea8; }
+    .work-link { font-size: 13px; font-weight: 700; color: var(--accent); text-decoration: none; opacity: 0.85; }
+    .work-link:hover { opacity: 1; }
+
+    /* ── Client placeholder ── */
+    .client-placeholder {
+      background: var(--surface); border: 1px dashed var(--border); border-radius: 16px;
+      padding: 28px 22px; text-align: center; color: var(--text-4); font-size: 13px; line-height: 1.8;
+    }
+    .client-placeholder b { color: var(--text-3); font-weight: 600; }
+
+    footer { text-align: center; margin-top: 48px; color: var(--text-4); font-size: 11px; line-height: 1.9; }
+    footer a { color: var(--text-3); text-decoration: none; border-bottom: 1px solid var(--border); }
+
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    .work-card, .client-placeholder { animation: rise 0.45s cubic-bezier(0.2,0.7,0.2,1) both; }
+    .work-card:nth-child(2) { animation-delay: 0.04s; }
+    .work-card:nth-child(3) { animation-delay: 0.08s; }
+    .work-card:nth-child(n+4) { animation-delay: 0.12s; }
+    @media (prefers-reduced-motion: reduce) { .work-card, .client-placeholder { animation: none; } }
+
+    @media (max-width: 380px) {
+      .work-card { grid-template-columns: 48px 1fr; gap: 13px; }
+      .work-icon { width: 48px; height: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">← Ataraxia Works</a>
+
+    <div class="page-head">
+      <div class="page-title">制作実績</div>
+      <p class="page-sub">自社開発のアプリを中心に掲載しています。受託案件は随時追加予定。</p>
+    </div>
+
+    <div class="section-label">自社開発プロダクト</div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="14" fill="#0d1525"/>
+        <circle cx="32" cy="32" r="3.5" fill="#7ec8e3"/>
+        <circle cx="32" cy="32" r="11" fill="none" stroke="#7ec8e3" stroke-width="1.6" opacity="0.70"/>
+        <circle cx="32" cy="32" r="19" fill="none" stroke="#7ec8e3" stroke-width="1.2" opacity="0.40"/>
+        <circle cx="32" cy="32" r="27" fill="none" stroke="#7ec8e3" stroke-width="0.9" opacity="0.18"/>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">凪</div>
+        <div class="work-kicker">anti-addiction idle game · PWA</div>
+        <p class="work-what">触れるほど乱れ、待つほど澄む反idle。Canvas水面アニメーション、7人の哲学者システム、オフラインキャッチアップ機能を実装。ストリーク・通知・広告・ログインなし。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">Canvas</span><span class="tag tech">PWA</span><span class="tag tech">Cloudflare Pages</span>
+          <span class="tag">ゲーム設計</span><span class="tag">アニメーション</span>
+        </div>
+        <a class="work-link" href="https://nagi.xdcyw.net" target="_blank" rel="noopener">nagi.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <g fill="#ffffff">
+          <circle cx="25" cy="20" r="5.4"/><circle cx="39" cy="20" r="5.4"/>
+          <circle cx="25" cy="32" r="5.4"/><circle cx="39" cy="32" r="5.4"/>
+          <circle cx="25" cy="44" r="5.4"/><circle cx="39" cy="44" r="5.4"/>
+        </g>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">Mosaic</div>
+        <div class="work-kicker">感情タイムライン · PWA</div>
+        <p class="work-what">DID・OSDD向けの記録アプリ。人格ごとの日記・気分・写真をLocalStorageで管理。カレンダービュー、検索、エクスポート機能付き。完全オフライン動作。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">LocalStorage</span><span class="tag tech">PWA</span>
+          <span class="tag">DID対応</span><span class="tag">カレンダーUI</span>
+        </div>
+        <a class="work-link" href="https://mosaic.xdcyw.net" target="_blank" rel="noopener">mosaic.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <g fill="#ffffff" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+          <polygon points="16,22 40,22 40,18 50,25 40,32 40,28 16,28"/>
+          <polygon points="48,36 24,36 24,32 14,39 24,46 24,42 48,42"/>
+        </g>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">Shift</div>
+        <div class="work-kicker">人格フロント管理 · PWA</div>
+        <p class="work-what">交代記録・申し送りメッセージ・Mosaicとのデータ連携を実装。リアルタイムに「今フロントにいる人格」を記録し、引き継ぎを支援する設計。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">LocalStorage</span><span class="tag tech">PWA</span>
+          <span class="tag">DID対応</span><span class="tag">アプリ間連携</span>
+        </div>
+        <a class="work-link" href="https://shift.xdcyw.net" target="_blank" rel="noopener">shift.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <g fill="none" stroke="#ffffff" stroke-width="1.8">
+          <circle cx="32" cy="32" r="5.5" fill="#ffffff" stroke="none"/>
+          <circle cx="32" cy="32" r="11.5" opacity="0.85"/>
+          <circle cx="32" cy="32" r="17.5" opacity="0.55"/>
+          <circle cx="32" cy="32" r="23.5" opacity="0.3"/>
+        </g>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">Still</div>
+        <div class="work-kicker">呼吸・グラウンディング · PWA</div>
+        <p class="work-what">呼吸ガイド（4-7-8・box・生理的ため息）と5-4-3-2-1グラウンディングをアニメーション付きで実装。prefers-reduced-motion対応。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">CSS Animation</span><span class="tag tech">PWA</span>
+          <span class="tag">アクセシビリティ</span><span class="tag">メンタルヘルス</span>
+        </div>
+        <a class="work-link" href="https://still.xdcyw.net" target="_blank" rel="noopener">still.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <g fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="32" cy="11.5" r="3.75"/>
+          <line x1="32" y1="15.25" x2="32" y2="49"/>
+          <line x1="24.5" y1="19.75" x2="39.5" y2="19.75"/>
+          <line x1="16" y1="19.5" x2="12.5" y2="26.75"/>
+          <line x1="16" y1="19.5" x2="19.5" y2="26.75"/>
+          <path d="M12.5 26.75 Q16 32.75 19.5 26.75"/>
+          <line x1="48" y1="19.5" x2="44.5" y2="26.75"/>
+          <line x1="48" y1="19.5" x2="51.5" y2="26.75"/>
+          <path d="M44.5 26.75 Q48 32.75 51.5 26.75"/>
+        </g>
+        <g fill="#ffffff">
+          <path d="M18.75 37.5 L15 38 L19 33.5 Z"/>
+          <path d="M45.25 37.5 L49 38 L45 33.5 Z"/>
+        </g>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">Anchor</div>
+        <div class="work-kicker">思考整理ツール · PWA</div>
+        <p class="work-what">ストア派「制御の二分法」を実装したWebアプリ。書き出し→分類→アクション設定の3ステップUX。LocalStorageで履歴管理。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">PWA</span>
+          <span class="tag">UXデザイン</span><span class="tag">認知行動</span>
+        </div>
+        <a class="work-link" href="https://anchor.xdcyw.net" target="_blank" rel="noopener">anchor.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#0f1116"/>
+        <circle cx="32" cy="17.5" r="4.2" fill="#ffffff"/>
+        <ellipse cx="32" cy="29" rx="9.5" ry="6.5" fill="#cdd6ff" opacity="0.48"/>
+        <ellipse cx="32" cy="38" rx="14.5" ry="8.5" fill="#cdd6ff" opacity="0.26"/>
+        <ellipse cx="32" cy="47" rx="19" ry="9.5" fill="#cdd6ff" opacity="0.13"/>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">墨流し</div>
+        <div class="work-kicker">就寝前の所作 · PWA</div>
+        <p class="work-what">書いた言葉が墨のように水面に広がり消えるCanvas演出を実装。送信後にデータを一切残さない設計。睡眠記録・スコア機能を意図的に排除。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">Canvas</span><span class="tag tech">PWA</span>
+          <span class="tag">プライバシー設計</span><span class="tag">アニメーション</span>
+        </div>
+        <a class="work-link" href="https://sumi.xdcyw.net" target="_blank" rel="noopener">sumi.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="32" y1="13" x2="32" y2="46.5"/>
+          <line x1="16" y1="19.5" x2="48" y2="19.5"/>
+          <line x1="16" y1="19.5" x2="12.5" y2="26.75"/>
+          <line x1="16" y1="19.5" x2="19.5" y2="26.75"/>
+          <path d="M12.5 26.75 Q16 32.75 19.5 26.75"/>
+          <line x1="48" y1="19.5" x2="44.5" y2="26.75"/>
+          <line x1="48" y1="19.5" x2="51.5" y2="26.75"/>
+          <path d="M44.5 26.75 Q48 32.75 51.5 26.75"/>
+          <path d="M26.5 50 L37.5 50 L36 46.5 L28 46.5 Z" fill="#ffffff" stroke="none"/>
+        </g>
+        <circle cx="32" cy="13" r="2" fill="#ffffff"/>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">Scale</div>
+        <div class="work-kicker">学習記録アプリ · PWA</div>
+        <p class="work-what">司法試験向け科目別タイマー・進捗グラフ・X連携シェア機能を実装。Chart.js不使用、SVGでグラフを自前描画。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">SVGグラフ</span><span class="tag tech">PWA</span>
+          <span class="tag">データビジュアライズ</span>
+        </div>
+        <a class="work-link" href="https://scale.xdcyw.net" target="_blank" rel="noopener">scale.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <path d="M46.5 39 C46.5 32 39.8 31.5 41.5 24.3 C42.8 19 38 18.8 38.5 12.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+        <rect x="13.8" y="40" width="29" height="5.4" rx="1.6" fill="#ffffff"/>
+        <rect x="13.8" y="40" width="7.8" height="5.4" rx="1.6" fill="#c9c9c9"/>
+        <line x1="21.6" y1="40.2" x2="21.6" y2="45.4" stroke="#1a1a1a" stroke-width="0.6"/>
+        <circle cx="46" cy="42.7" r="3.3" fill="#ffffff" opacity="0.2"/>
+        <circle cx="46" cy="42.7" r="1.9" fill="#ffffff"/>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">Ember</div>
+        <div class="work-kicker">喫煙記録アプリ · PWA</div>
+        <p class="work-what">ワンタップ記録・きっかけ分析・在庫管理・コスト集計をLocalStorageで実装。禁煙を促さない非説教的UXを設計。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">LocalStorage</span><span class="tag tech">PWA</span>
+          <span class="tag">UXデザイン</span>
+        </div>
+        <a class="work-link" href="https://ember.xdcyw.net" target="_blank" rel="noopener">ember.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <g fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.5 32 Q32 16.5 53.5 32 Q32 47.5 10.5 32 Z"/>
+          <circle cx="32" cy="32" r="8"/>
+          <path d="M32 21 A11 11 0 0 1 43 32" opacity="0.5"/>
+        </g>
+        <circle cx="32" cy="32" r="3" fill="#ffffff"/>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">Hue</div>
+        <div class="work-kicker">気分記録・色相可視化 · PWA</div>
+        <p class="work-what">7問の回答から気分を色相値に変換して可視化。月間カラーグリッド表示、X用カード画像のCanvas生成・ダウンロード機能を実装。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">Canvas</span><span class="tag tech">PWA</span>
+          <span class="tag">データビジュアライズ</span><span class="tag">画像生成</span>
+        </div>
+        <a class="work-link" href="https://hue.xdcyw.net" target="_blank" rel="noopener">hue.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <line x1="14" y1="48" x2="50" y2="48" stroke="#3a4555" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="32" y1="47" x2="32" y2="32" stroke="#5aaa72" stroke-width="3" stroke-linecap="round" opacity="0.68"/>
+        <line x1="32" y1="40" x2="20" y2="32" stroke="#5aaa72" stroke-width="2" stroke-linecap="round" opacity="0.48"/>
+        <line x1="32" y1="40" x2="44" y2="32" stroke="#5aaa72" stroke-width="2" stroke-linecap="round" opacity="0.48"/>
+        <ellipse cx="32" cy="24" rx="14" ry="11" fill="#5aaa72" opacity="0.85"/>
+        <ellipse cx="19" cy="32" rx="8" ry="7" fill="#5aaa72" opacity="0.68"/>
+        <ellipse cx="45" cy="32" rx="8" ry="7" fill="#5aaa72" opacity="0.68"/>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">Tend</div>
+        <div class="work-kicker">習慣トラッカー · PWA</div>
+        <p class="work-what">ストリークなし・減らないカウンターの習慣記録。植物成長アニメーションをCSS/JSで実装。抜けた日を責める表示を設計段階から排除。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">CSS Animation</span><span class="tag tech">PWA</span>
+          <span class="tag">プロダクト設計</span>
+        </div>
+        <a class="work-link" href="https://tend.xdcyw.net" target="_blank" rel="noopener">tend.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#0f0f0f"/>
+        <path d="M32 10 A22 22 0 1 1 21 50" fill="none" stroke="#c4974a" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="32" cy="32" r="5" fill="#c4974a" opacity="0.3"/>
+        <circle cx="32" cy="32" r="2.5" fill="#c4974a"/>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">参道</div>
+        <div class="work-kicker">巡礼記録アプリ · PWA</div>
+        <p class="work-what">四国八十八ヶ所88寺の参拝記録アプリ。寺データ・地図座標・御朱印管理をLocalStorageで実装。達成率・連続日数を意図的に非表示。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">LocalStorage</span><span class="tag tech">PWA</span>
+          <span class="tag">コンテンツ設計</span>
+        </div>
+        <a class="work-link" href="https://sando.xdcyw.net" target="_blank" rel="noopener">sando.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <svg class="work-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#efe9dc"/>
+        <rect x="21" y="13" width="22" height="38" rx="5" fill="#faf7f0" stroke="#45688f" stroke-width="2.4"/>
+        <g stroke="#5b5648" stroke-width="2" stroke-linecap="round">
+          <line x1="27" y1="22" x2="38" y2="22"/>
+          <line x1="27" y1="29" x2="38" y2="29"/>
+          <line x1="27" y1="36" x2="38" y2="36"/>
+          <line x1="27" y1="43" x2="34" y2="43"/>
+        </g>
+        <circle cx="37" cy="43" r="1.7" fill="#45688f"/>
+      </svg>
+      <div class="work-body">
+        <div class="work-name">Hypomnema</div>
+        <div class="work-kicker">マークダウンメモ · PWA</div>
+        <p class="work-what">WYSIWYGマークダウンエディタをゼロ依存で実装。記号を表示せずリアルタイムにHTMLへ変換。Markdown書き出し・インポート機能付き。</p>
+        <div class="work-meta">
+          <span class="tag tech">Vanilla JS</span><span class="tag tech">ContentEditable</span><span class="tag tech">PWA</span>
+          <span class="tag">エディタ実装</span>
+        </div>
+        <a class="work-link" href="https://hypomnema.xdcyw.net" target="_blank" rel="noopener">hypomnema.xdcyw.net →</a>
+      </div>
+    </div>
+
+    <div class="section-label">受託案件</div>
+
+    <div class="client-placeholder">
+      <b>受付中です。</b><br>
+      実績は随時掲載します。<a href="/#contact">お問い合わせ</a>からご連絡ください。
+    </div>
+
+    <footer>
+      <a href="/">← トップに戻る</a><br><br>
+      © 2026 田中芙雪 / Ataraxia Works
+    </footer>
+  </div>
+</body>
+</html>
