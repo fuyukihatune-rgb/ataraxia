@@ -130,7 +130,9 @@
     .card:nth-of-type(6) { animation-delay: 0.18s; }
     .card:nth-of-type(7) { animation-delay: 0.21s; }
     .card:nth-of-type(8) { animation-delay: 0.23s; }
-    .card:nth-of-type(n+9) { animation-delay: 0.25s; }
+    .card:nth-of-type(9)  { animation-delay: 0.25s; }
+    .card:nth-of-type(10) { animation-delay: 0.27s; }
+    .card:nth-of-type(n+11) { animation-delay: 0.29s; }
     @media (prefers-reduced-motion: reduce) { .hero, .apps-head, .pair, .card { animation: none; } html { scroll-behavior: auto; } }
 
     @media (max-width: 380px) {
@@ -150,7 +152,7 @@
         <circle cx="32" cy="32" r="4.4" fill="#ffffff"/>
       </svg>
       <div class="hero-logo">Ataraxia Works</div>
-      <p class="hero-tagline">AIを活用したWeb制作 &amp; 自社アプリ開発</p>
+      <p class="hero-tagline">AIを活用したWeb制作 &amp; プロダクト開発</p>
       <div class="hero-actions">
         <a class="hero-cta" href="#contact">お問い合わせ →</a>
         <a class="hero-sub" href="#portfolio">アプリを見る ↓</a>
@@ -234,7 +236,30 @@
       </form>
     </section>
 
-    <div class="apps-head" id="portfolio">自社プロダクト（実績）</div>
+    <div class="apps-head" id="portfolio">プロダクト</div>
+
+    <div class="apps-head">Webサービス</div>
+
+    <section class="card app-card">
+      <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Rakupage">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#1a1a1a"/>
+        <rect x="15" y="14" width="34" height="42" rx="4" fill="none" stroke="#ffffff" stroke-width="2"/>
+        <line x1="22" y1="24" x2="42" y2="24" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+        <line x1="22" y1="31" x2="42" y2="31" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+        <line x1="22" y1="37" x2="36" y2="37" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="46" cy="18" r="7" fill="#1a1a1a"/>
+        <path d="M43 18 L46 14 L49 18 L46 22 Z" fill="#ffffff" opacity="0.95"/>
+      </svg>
+      <div class="app-body">
+        <div class="app-name">Rakupage</div>
+        <div class="app-kicker">AIランディングページ自動生成 SaaS</div>
+        <p class="app-desc">事業内容を入力するだけで、AIが本格的なランディングページを自動生成します。Free / Lite / Pro の3プラン。まず無料でプレビューを確認し、気に入ったら公開まで。</p>
+        <div class="app-tags"><span class="tag">SaaS</span><span class="tag">LP生成</span><span class="tag">AI</span></div>
+        <a class="app-open" href="https://rakupage.net" target="_blank" rel="noopener">Rakupage を開く <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <div class="apps-head">PWA ツール</div>
 
     <section class="card intro">
       DID・OSDD など<strong>複数性とともに生きる人</strong>のための道具、<strong>心を落ち着けるための道具</strong>、そして<strong>日々を記録して把握するための道具</strong>をつくっています。<br>
