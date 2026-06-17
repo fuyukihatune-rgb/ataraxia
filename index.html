@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Ataraxia Works — AIと共につくる、生きたプロダクト。</title>
-  <meta name="description" content="AIと共につくる、生きたプロダクト。コーポレートサイト・LP・PWA制作を低コスト・短納期で。自律進化SNS「Y」など自社プロダクト15本が実績。ataraxia works（田中芙雪）。" />
+  <title>Ataraxia Works — 田中芙雪 ポートフォリオ</title>
+  <meta name="description" content="田中芙雪（Sirusu）のポートフォリオ。Cloudflare Workers・Claude API・Stripe を使い、SNS・SaaS・PWA・Android アプリを独力で16本開発。実務未経験／2026年6月〜個人事業主として活動中。" />
   <meta name="theme-color" content="#f9f9f9" />
-  <meta property="og:title" content="Ataraxia Works — AIと共につくる、生きたプロダクト。" />
-  <meta property="og:description" content="AIと共につくる、生きたプロダクト。コーポレートサイト・LP・PWAを低コスト・短納期で。自律進化SNS「Y」など自社プロダクト15本が実績。" />
+  <meta property="og:title" content="Ataraxia Works — 田中芙雪 ポートフォリオ" />
+  <meta property="og:description" content="SNS・SaaS・PWA・Android アプリを16本独力開発。Cloudflare Workers / Claude API / Stripe / React + TypeScript 等。" />
   <meta property="og:type" content="website" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,6 +51,15 @@
     .intro { font-size: 14px; color: var(--text-2); line-height: 1.85; }
     .intro strong { color: var(--text); font-weight: 700; }
 
+    /* ── About ── */
+    .about-name { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 4px; }
+    .about-sub  { font-size: 13px; color: var(--text-3); margin-bottom: 14px; }
+    .about-body { font-size: 14px; color: var(--text-2); line-height: 1.85; margin-bottom: 18px; }
+    .about-body strong { color: var(--text); font-weight: 700; }
+    .stack-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+    .stack-tag { font-size: 11.5px; font-weight: 600; background: var(--accent-soft); color: var(--text-2); padding: 4px 10px; border-radius: 6px; letter-spacing: 0.01em; }
+    .stack-tag.hi { background: #1a1a1a; color: #fff; }
+
     /* ── Section heading ── */
     .apps-head { display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 700; color: var(--text-4); letter-spacing: 0.08em; margin: 30px 4px 14px; }
     .apps-head::after { content: ""; flex: 1; height: 1px; background: var(--border-light); }
@@ -77,41 +86,6 @@
     .pair { display: flex; align-items: center; gap: 10px; font-size: 11.5px; color: var(--text-4); text-align: center; margin: 10px 4px; }
     .line { flex: 1; height: 1px; background: var(--border-light); }
 
-    /* ── Service ── */
-    .service-headline { font-size: 26px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 10px; }
-    .service-body { font-size: 14px; color: var(--text-2); line-height: 1.8; margin-bottom: 20px; }
-    .works-link { color: var(--text); font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--border); transition: border-color 0.15s; }
-    @media (hover: hover) { .works-link:hover { border-color: var(--text); } }
-    .service-features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    @media (max-width: 400px) { .service-features { grid-template-columns: 1fr; } }
-    .feature { background: var(--accent-soft); border-radius: 10px; padding: 13px 15px; }
-    .feature-label { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
-    .feature-desc { font-size: 12px; color: var(--text-3); line-height: 1.6; }
-
-    /* ── Pricing ── */
-    .price-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--border-light); font-size: 13.5px; }
-    .price-row:first-child { padding-top: 0; }
-    .price-row:last-child { border-bottom: none; padding-bottom: 0; }
-    .price-name { color: var(--text-2); }
-    .price-val { font-weight: 800; font-size: 15px; }
-    .price-note { font-size: 12px; color: var(--text-4); margin-top: 14px; line-height: 1.7; }
-
-    /* ── Contact form ── */
-    .contact-form label { display: block; font-size: 12px; font-weight: 700; color: var(--text-3); margin-bottom: 5px; margin-top: 14px; letter-spacing: 0.04em; text-transform: uppercase; }
-    .contact-form label:first-child { margin-top: 0; }
-    .contact-form input, .contact-form textarea, .contact-form select {
-      width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px;
-      font-size: 16px; font-family: inherit; background: var(--bg); color: var(--text);
-      transition: border-color 0.15s; outline: none; appearance: none; -webkit-appearance: none;
-    }
-    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color: var(--text-3); }
-    .contact-form textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
-    .contact-form select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23bbb' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
-    .contact-submit { margin-top: 16px; display: block; width: 100%; background: var(--accent); color: #fff;
-      font-size: 14px; font-weight: 700; padding: 13px; border-radius: 10px; border: none; cursor: pointer;
-      transition: opacity 0.15s; font-family: inherit; letter-spacing: 0.01em; }
-    @media (hover: hover) { .contact-submit:hover { opacity: 0.82; } }
-
     /* ── Footer ── */
     footer { text-align: center; margin-top: 36px; color: var(--text-4); font-size: 11px; line-height: 1.9; }
     .footer-mark { width: 30px; height: 30px; display: block; margin: 0 auto 12px; opacity: 0.7; }
@@ -119,7 +93,6 @@
     @media (hover: hover) { footer a:hover { color: var(--text); border-color: var(--text-4); } }
 
     a:focus-visible, .app-open:focus-visible, .app-apk:focus-visible, .hero-cta:focus-visible, .hero-sub:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: 8px; }
-
     ::selection { background: rgba(26,26,26,0.10); }
 
     @keyframes rise { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: none; } }
@@ -154,93 +127,61 @@
         <circle cx="32" cy="32" r="4.4" fill="#ffffff"/>
       </svg>
       <div class="hero-logo">Ataraxia Works</div>
-      <p class="hero-tagline">AIと共につくる、生きたプロダクト。</p>
+      <p class="hero-tagline">田中芙雪（Sirusu）— ソフトウェアエンジニア / 個人開発者</p>
       <div class="hero-actions">
-        <a class="hero-cta" href="#contact">お問い合わせ →</a>
-        <a class="hero-sub" href="#portfolio">アプリを見る ↓</a>
+        <a class="hero-cta" href="https://github.com/fuyukihatune-rgb" target="_blank" rel="noopener">GitHub →</a>
+        <a class="hero-sub" href="#works">プロダクトを見る ↓</a>
       </div>
     </header>
 
-    <div class="apps-head">受託開発サービス</div>
+    <div class="apps-head">About</div>
 
     <section class="card">
-      <div class="service-headline">AIと共につくる、生きたプロダクト。</div>
-      <p class="service-body">コーポレートサイト・LP・PWA を、AIを最大活用した開発フローで<strong>通常の半分以下の期間</strong>で制作します。自社SNS「Y」のように、AIが自律的に動き続けるシステムの開発も得意です。<a href="/works.html" class="works-link">制作実績を見る →</a></p>
-      <div class="service-features">
-        <div class="feature">
-          <div class="feature-label">スピード納品</div>
-          <div class="feature-desc">AIを最大活用した開発フローで、通常より大幅に短い期間で。</div>
-        </div>
-        <div class="feature">
-          <div class="feature-label">透明な料金</div>
-          <div class="feature-desc">目安を事前に明示。追加費用はご相談の上で確定します。</div>
-        </div>
-        <div class="feature">
-          <div class="feature-label">コーポレートサイト / LP</div>
-          <div class="feature-desc">ブランドに合わせたデザイン。レスポンシブ・アクセシブル対応。</div>
-        </div>
-        <div class="feature">
-          <div class="feature-label">PWA・Webアプリ</div>
-          <div class="feature-desc">スマホ対応、オフライン動作、ホーム画面追加まで。</div>
-        </div>
+      <div class="about-name">田中 芙雪 <span style="font-size:14px;font-weight:500;color:var(--text-3)">/ Sirusu</span></div>
+      <div class="about-sub">ataraxia works — 2026年6月 個人事業主として開業 · 実務未経験</div>
+      <p class="about-body">
+        AI を最大限に活用した個人開発者。<strong>自律進化SNS「Y」</strong>（Cloudflare Workers + Claude API）や<strong>AI LP生成SaaS「Rakupage」</strong>（Stripe 決済）を含む、<strong>16本のプロダクトを独力で設計・開発・リリース</strong>しました。<br><br>
+        フロントエンド（バニラJS・React + TypeScript）からバックエンド（Cloudflare Workers / D1 / KV）・インフラ・決済・メール・AI連携まで一気通貫で担当。PWA と TWA（Android APK）による実機配布の経験あり。
+      </p>
+      <div class="stack-grid">
+        <span class="stack-tag hi">Cloudflare Workers</span>
+        <span class="stack-tag hi">Claude API</span>
+        <span class="stack-tag hi">TypeScript</span>
+        <span class="stack-tag hi">React</span>
+        <span class="stack-tag hi">Stripe</span>
+        <span class="stack-tag">D1 / SQLite</span>
+        <span class="stack-tag">KV</span>
+        <span class="stack-tag">Vite</span>
+        <span class="stack-tag">PWA</span>
+        <span class="stack-tag">TWA / Android</span>
+        <span class="stack-tag">Resend</span>
+        <span class="stack-tag">JWT / OTP 認証</span>
+        <span class="stack-tag">E2E 暗号化</span>
+        <span class="stack-tag">Vanilla JS</span>
+        <span class="stack-tag">HTML / CSS</span>
+        <span class="stack-tag">Git / GitHub</span>
       </div>
     </section>
 
-    <div class="apps-head">料金の目安</div>
+    <div class="apps-head" id="works">フラッグシップ</div>
 
-    <section class="card">
-      <div class="price-row">
-        <span class="price-name">LP・ランディングページ（1ページ）</span>
-        <span class="price-val">¥10,000〜</span>
+    <section class="card app-card">
+      <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Y">
+        <rect x="4" y="4" width="56" height="56" rx="14" fill="#050508"/>
+        <defs><linearGradient id="yg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c6af8"/><stop offset="55%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient></defs>
+        <circle cx="32" cy="32" r="18" fill="none" stroke="url(#yg)" stroke-width="2.2" opacity="0.9"/>
+        <circle cx="32" cy="32" r="5" fill="url(#yg)"/>
+      </svg>
+      <div class="app-body">
+        <div class="app-name">Y</div>
+        <div class="app-kicker">自律進化 SNS — Cloudflare Workers + Claude API</div>
+        <p class="app-desc">プラットフォームそのものである「Y」が毎時 Claude に問い、コミュニティを観察してテーマ・アルゴリズム・お知らせを自律的に書き換えます。AI住人「サクラ」「ヒカリ」が常駐し、@y に話しかければ Y 自身が返答。OpenClaw API で外部ボットも接続可能。OTP メール認証、D1・KV によるサーバーレス構成。</p>
+        <div class="app-tags"><span class="tag">Cloudflare Workers</span><span class="tag">D1 / KV</span><span class="tag">Claude API</span><span class="tag">OTP 認証</span><span class="tag">OpenClaw API</span><span class="tag">SNS</span></div>
+        <div class="app-actions">
+          <a class="app-open" href="https://y.xdcyw.net" target="_blank" rel="noopener">Y を開く <span class="arrow">→</span></a>
+        </div>
       </div>
-      <div class="price-row">
-        <span class="price-name">コーポレートサイト（〜5ページ）</span>
-        <span class="price-val">¥30,000〜</span>
-      </div>
-      <div class="price-row">
-        <span class="price-name">PWA・Webアプリ</span>
-        <span class="price-val">¥50,000〜</span>
-      </div>
-      <p class="price-note">規模・要件によりご相談。初回無料ヒアリング（30分）でお見積もりします。AIを活用することで、同品質のものを通常より低コストで提供できます。</p>
     </section>
-
-    <div class="apps-head" id="contact">お問い合わせ</div>
-
-    <section class="card">
-      <form action="https://formspree.io/f/mgobdgze" method="POST" class="contact-form">
-        <label for="cf-name">お名前</label>
-        <input id="cf-name" type="text" name="name" required placeholder="田中 ◯◯" autocomplete="name" />
-
-        <label for="cf-email">メールアドレス</label>
-        <input id="cf-email" type="email" name="email" required placeholder="your@email.com" autocomplete="email" />
-
-        <label for="cf-type">依頼内容</label>
-        <select id="cf-type" name="type">
-          <option>LP・ランディングページ</option>
-          <option>コーポレートサイト</option>
-          <option>PWA・Webアプリ</option>
-          <option>その他・まずはご相談</option>
-        </select>
-
-        <label for="cf-budget">予算の目安</label>
-        <select id="cf-budget" name="budget">
-          <option>〜 ¥30,000</option>
-          <option>¥30,000 〜 ¥80,000</option>
-          <option>¥80,000 〜 ¥150,000</option>
-          <option>¥150,000〜</option>
-          <option>要相談・わからない</option>
-        </select>
-
-        <label for="cf-msg">メッセージ（任意）</label>
-        <textarea id="cf-msg" name="message" placeholder="依頼の概要・参考サイト・ご要望などがあればお知らせください。"></textarea>
-
-        <button type="submit" class="contact-submit">送信する →</button>
-      </form>
-    </section>
-
-    <div class="apps-head" id="portfolio">プロダクト</div>
-
-    <div class="apps-head">Webサービス</div>
 
     <section class="card app-card">
       <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Rakupage">
@@ -254,18 +195,17 @@
       </svg>
       <div class="app-body">
         <div class="app-name">Rakupage</div>
-        <div class="app-kicker">AIランディングページ自動生成 SaaS</div>
-        <p class="app-desc">事業内容を入力するだけで、AIが本格的なランディングページを自動生成します。Free / Lite / Pro の3プラン。まず無料でプレビューを確認し、気に入ったら公開まで。</p>
-        <div class="app-tags"><span class="tag">SaaS</span><span class="tag">LP生成</span><span class="tag">AI</span></div>
+        <div class="app-kicker">AI LP 自動生成 SaaS — Stripe 決済 + Cloudflare Workers</div>
+        <p class="app-desc">事業情報を入力するだけで Claude が本格的な LP HTML を自動生成し、サブドメインで即公開。Free / Lite（¥500/月）/ Pro（¥1,500/月）の3プラン。Stripe サブスクリプション・Resend OTP 認証・Cloudflare D1 によるサーバーレス SaaS を単独で設計・実装。</p>
+        <div class="app-tags"><span class="tag">SaaS</span><span class="tag">Claude API</span><span class="tag">Stripe</span><span class="tag">Cloudflare Workers</span><span class="tag">Resend</span></div>
         <a class="app-open" href="https://rakupage.net" target="_blank" rel="noopener">Rakupage を開く <span class="arrow">→</span></a>
       </div>
     </section>
 
-    <div class="apps-head">PWA ツール</div>
+    <div class="apps-head">複数性とともに生きる人のための道具</div>
 
     <section class="card intro">
-      DID・OSDD など<strong>複数性とともに生きる人</strong>のための道具、<strong>心を落ち着けるための道具</strong>、そして<strong>日々を記録して把握するための道具</strong>をつくっています。<br>
-      記録はすべて<strong>あなたの端末の中だけ</strong>。広告も、追跡も、ログインもありません。Plurality Pro のみ月額200円、その他はすべて無料でオフラインでも動きます。
+      DID・OSDD など<strong>複数性とともに生きる人</strong>のための道具。記録はすべて<strong>端末の中だけ</strong>。広告も追跡もログインもなし。
     </section>
 
     <section class="card app-card">
@@ -280,8 +220,8 @@
       <div class="app-body">
         <div class="app-name">Mosaic</div>
         <div class="app-kicker">過去の記録・感情のタイムライン</div>
-        <p class="app-desc">「何があったか」を、人格ごとにやさしく書きとめるメモアプリ。気分や写真もいっしょに残せて、カレンダーや検索で振り返れます。</p>
-        <div class="app-tags"><span class="tag">タイムライン</span><span class="tag">完全プライベート</span><span class="tag">PWA</span></div>
+        <p class="app-desc">「何があったか」を人格ごとにやさしく書きとめるメモアプリ。気分・写真もいっしょに残せて、カレンダーや検索で振り返れます。</p>
+        <div class="app-tags"><span class="tag">タイムライン</span><span class="tag">完全プライベート</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://mosaic.xdcyw.net" target="_blank" rel="noopener">Mosaic を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/mosaic/raw/main/mosaic.apk" download>Android APK ↓</a>
@@ -302,8 +242,8 @@
       <div class="app-body">
         <div class="app-name">Shift</div>
         <div class="app-kicker">今のフロント管理・申し送り</div>
-        <p class="app-desc">「今だれがフロントにいるか」を記録し、交代の履歴を残せるアプリ。人格どうしのメッセージ（申し送り）も送れます。Mosaic の人格情報をそのまま引き継げます。</p>
-        <div class="app-tags"><span class="tag">フロント管理</span><span class="tag">申し送り</span><span class="tag">PWA</span></div>
+        <p class="app-desc">「今だれがフロントにいるか」を記録し、交代の履歴を残すアプリ。人格どうしのメッセージ（申し送り）も送れます。Mosaic の人格情報をそのまま引き継げます。</p>
+        <div class="app-tags"><span class="tag">フロント管理</span><span class="tag">申し送り</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://shift.xdcyw.net" target="_blank" rel="noopener">Shift を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/shift/raw/main/shift.apk" download>Android APK ↓</a>
@@ -311,7 +251,7 @@
       </div>
     </section>
 
-    <div class="pair"><span class="line"></span>両方の機能をひとつに統合した有料版<span class="line"></span></div>
+    <div class="pair"><span class="line"></span>両機能を統合した有料版 — React + TypeScript + Stripe + E2E 暗号化<span class="line"></span></div>
 
     <section class="card app-card" style="border: 1.5px solid #c9a96e44; background: linear-gradient(135deg, #0f0f0f 0%, #1a140a 100%);">
       <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Plurality Pro">
@@ -327,12 +267,14 @@
       </svg>
       <div class="app-body">
         <div class="app-name" style="color:#c9a96e">Plurality Pro</div>
-        <div class="app-kicker" style="color:#c9a96e88">Mosaic + Shift の上位版 · 月額200円</div>
-        <p class="app-desc" style="color:#c9a96ecc">Mosaic・Shift のデータをそのまま引き継ぎ可能。E2Eエンドツーエンド暗号化クラウド同期・日誌・カレンダー・統計・6テーマ搭載。Stripe による安全な決済。</p>
+        <div class="app-kicker" style="color:#c9a96e88">Mosaic + Shift 上位版 · 月額200円 · React 19 + TypeScript + Vite</div>
+        <p class="app-desc" style="color:#c9a96ecc">E2E エンドツーエンド暗号化クラウド同期・日誌・カレンダー・統計・6テーマ。Stripe サブスクリプション・Dexie.js（IndexedDB）・AES-GCM 暗号化を React 19 + TypeScript + Vite で実装。</p>
         <div class="app-tags">
-          <span class="tag" style="background:#c9a96e22;color:#c9a96e">有料</span>
-          <span class="tag" style="background:#c9a96e22;color:#c9a96e">E2E暗号化同期</span>
-          <span class="tag" style="background:#c9a96e22;color:#c9a96e">PWA</span>
+          <span class="tag" style="background:#c9a96e22;color:#c9a96e">React 19</span>
+          <span class="tag" style="background:#c9a96e22;color:#c9a96e">TypeScript</span>
+          <span class="tag" style="background:#c9a96e22;color:#c9a96e">Stripe</span>
+          <span class="tag" style="background:#c9a96e22;color:#c9a96e">E2E 暗号化</span>
+          <span class="tag" style="background:#c9a96e22;color:#c9a96e">Dexie.js</span>
         </div>
         <div class="app-actions">
           <a class="app-open" href="https://plurality-pro.pages.dev" target="_blank" rel="noopener" style="color:#c9a96e">Plurality Pro を開く <span class="arrow">→</span></a>
@@ -340,7 +282,7 @@
       </div>
     </section>
 
-    <div class="pair"><span class="line"></span>そして、気持ちを落ち着けたいときに<span class="line"></span></div>
+    <div class="apps-head">心を落ち着けるための道具</div>
 
     <section class="card app-card">
       <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Still">
@@ -355,8 +297,8 @@
       <div class="app-body">
         <div class="app-name">Still</div>
         <div class="app-kicker">呼吸とグラウンディング</div>
-        <p class="app-desc">呼吸ガイドと 5-4-3-2-1 グラウンディングで、ざわついた気持ちを「今ここ」にそっと戻すアプリ。だれでも使えて、つらいときの小さなお守りに。</p>
-        <div class="app-tags"><span class="tag">呼吸ガイド</span><span class="tag">グラウンディング</span><span class="tag">PWA</span></div>
+        <p class="app-desc">呼吸ガイドと 5-4-3-2-1 グラウンディングで、ざわついた気持ちを「今ここ」にそっと戻すアプリ。</p>
+        <div class="app-tags"><span class="tag">呼吸ガイド</span><span class="tag">グラウンディング</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://still.xdcyw.net" target="_blank" rel="noopener">Still を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/still/raw/main/still.apk" download>Android APK ↓</a>
@@ -364,7 +306,7 @@
       </div>
     </section>
 
-    <div class="pair"><span class="line"></span>身体から、そして思考から。鎮めるための二つ<span class="line"></span></div>
+    <div class="pair"><span class="line"></span>身体から、そして思考から<span class="line"></span></div>
 
     <section class="card app-card">
       <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Anchor">
@@ -387,9 +329,9 @@
       </svg>
       <div class="app-body">
         <div class="app-name">Anchor</div>
-        <div class="app-kicker">思考から、鎮める</div>
-        <p class="app-desc">気になることを書き出して、自分の手の中にあること／手の外にあることに仕分ける。手放せるものは手放し、動かせることには小さな一手をひとつ。ストア派の「制御の二分法」を、責めない道具に。</p>
-        <div class="app-tags"><span class="tag">思考の整理</span><span class="tag">ストア派</span><span class="tag">PWA</span></div>
+        <div class="app-kicker">思考を整理する — ストア派「制御の二分法」</div>
+        <p class="app-desc">気になることを書き出して、自分の手の中にあること／手の外にあることに仕分ける。手放せるものは手放し、動かせることには小さな一手をひとつ。</p>
+        <div class="app-tags"><span class="tag">思考の整理</span><span class="tag">ストア派</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://anchor.xdcyw.net" target="_blank" rel="noopener">Anchor を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/anchor/raw/main/anchor.apk" download>Android APK ↓</a>
@@ -397,7 +339,7 @@
       </div>
     </section>
 
-    <div class="pair"><span class="line"></span>そして、一日の終わりに、ひとつ手放す<span class="line"></span></div>
+    <div class="pair"><span class="line"></span>一日の終わりに、ひとつ手放す<span class="line"></span></div>
 
     <section class="card app-card">
       <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="墨流し">
@@ -410,8 +352,8 @@
       <div class="app-body">
         <div class="app-name">墨流し</div>
         <div class="app-kicker">夜、ひとつ手放す</div>
-        <p class="app-desc">眠れても眠れなくても、心が乱れていない。就寝前に、心の引っかかりをひとことだけ書いて、墨のように水へ流す所作。睡眠時間もスコアも測らず、連続記録も貯めません。書いた言葉は流した瞬間に消え、端末にも残りません。</p>
-        <div class="app-tags"><span class="tag">就寝前の所作</span><span class="tag">測らない</span><span class="tag">PWA</span></div>
+        <p class="app-desc">就寝前に心の引っかかりをひとことだけ書いて、墨のように水へ流す所作。書いた言葉は流した瞬間に消え、端末にも残りません。</p>
+        <div class="app-tags"><span class="tag">就寝前の所作</span><span class="tag">測らない</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://sumi.xdcyw.net" target="_blank" rel="noopener">墨流し を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/sumi/raw/main/sumi.apk" download>Android APK ↓</a>
@@ -419,7 +361,7 @@
       </div>
     </section>
 
-    <div class="pair"><span class="line"></span>そして、心の水面を、凪がせる<span class="line"></span></div>
+    <div class="pair"><span class="line"></span>そして、心の水面を凪がせる<span class="line"></span></div>
 
     <section class="card app-card">
       <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="凪">
@@ -431,9 +373,9 @@
       </svg>
       <div class="app-body">
         <div class="app-name">凪</div>
-        <div class="app-kicker">心の水面を、凪がせる idle</div>
-        <p class="app-desc">触れるほど乱れ、待つほど澄む。哲学者を招いて回復を速め、静けさ 100 を目指す——でも、勝利条件はプレイしなくて済むこと。ストリークも通知も広告もなし。離席した時間だけ、心は勝手に凪いでいく。</p>
-        <div class="app-tags"><span class="tag">anti-idle</span><span class="tag">哲学者</span><span class="tag">PWA</span></div>
+        <div class="app-kicker">心の水面を凪がせる — anti-idle</div>
+        <p class="app-desc">触れるほど乱れ、待つほど澄む。哲学者を招いて回復を速め、静けさ 100 を目指す。ストリークも通知も広告もなし。離席した時間だけ、心は勝手に凪いでいく。</p>
+        <div class="app-tags"><span class="tag">anti-idle</span><span class="tag">哲学者</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://nagi.xdcyw.net" target="_blank" rel="noopener">凪 を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/nagi/raw/main/nagi.apk" download>Android APK ↓</a>
@@ -441,7 +383,7 @@
       </div>
     </section>
 
-    <div class="apps-head">記録して、把握するための道具</div>
+    <div class="apps-head">記録・習慣のための道具</div>
 
     <section class="card app-card">
       <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Scale">
@@ -462,8 +404,8 @@
       <div class="app-body">
         <div class="app-name">Scale</div>
         <div class="app-kicker">学習記録・科目バランス</div>
-        <p class="app-desc">司法試験・予備試験の学習時間を科目ごとに記録し、勉強のバランスや過去問の進み具合を見える化するアプリ。タイマーで計って、今日の頑張りはXにシェアもできます。</p>
-        <div class="app-tags"><span class="tag">学習記録</span><span class="tag">科目バランス</span><span class="tag">PWA</span></div>
+        <p class="app-desc">司法試験・予備試験の学習時間を科目ごとに記録し、バランスや過去問の進み具合を見える化。タイマー計測・X シェア機能付き。</p>
+        <div class="app-tags"><span class="tag">学習記録</span><span class="tag">科目バランス</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://scale.xdcyw.net" target="_blank" rel="noopener">Scale を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/scale/raw/main/scale.apk" download>Android APK ↓</a>
@@ -483,9 +425,9 @@
       </svg>
       <div class="app-body">
         <div class="app-name">Ember</div>
-        <div class="app-kicker">喫煙記録</div>
-        <p class="app-desc">禁煙アプリはあるけれど「ただ記録したい」人の道具は意外とない。責めず急かさず、吸った一本をワンタップで記録。きっかけ・満足度・在庫（あと何本）・コストまで把握できます。</p>
-        <div class="app-tags"><span class="tag">喫煙記録</span><span class="tag">在庫管理</span><span class="tag">PWA</span></div>
+        <div class="app-kicker">責めない喫煙記録</div>
+        <p class="app-desc">禁煙アプリはあるけれど「ただ記録したい」人の道具。責めず急かさず、一本をワンタップで記録。きっかけ・満足度・在庫・コストまで把握できます。</p>
+        <div class="app-tags"><span class="tag">喫煙記録</span><span class="tag">在庫管理</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://ember.xdcyw.net" target="_blank" rel="noopener">Ember を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/Ember/raw/main/ember.apk" download>Android APK ↓</a>
@@ -505,9 +447,9 @@
       </svg>
       <div class="app-body">
         <div class="app-name">Hue</div>
-        <div class="app-kicker">今日の色相</div>
-        <p class="app-desc">7つの質問に答えると、今日の心の状態を「色相」という色で映し出します。澄んでいるか、少し濁っているか。結果はカード画像にして X にシェアできます。毎日記録すると月のカラーグリッドで振り返れます。</p>
-        <div class="app-tags"><span class="tag">セルフチェック</span><span class="tag">色相</span><span class="tag">PWA</span></div>
+        <div class="app-kicker">今日の心の色相</div>
+        <p class="app-desc">7つの質問に答えると、今日の心の状態を「色相」という色で映し出します。結果はカード画像にして X にシェア可能。月のカラーグリッドで振り返れます。</p>
+        <div class="app-tags"><span class="tag">セルフチェック</span><span class="tag">色相</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://hue.xdcyw.net" target="_blank" rel="noopener">Hue を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/hue/raw/main/hue.apk" download>Android APK ↓</a>
@@ -515,7 +457,7 @@
       </div>
     </section>
 
-    <div class="pair"><span class="line"></span>そして、習慣を罰せずに育てる<span class="line"></span></div>
+    <div class="pair"><span class="line"></span>習慣を罰せずに育てる<span class="line"></span></div>
 
     <section class="card app-card">
       <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Tend">
@@ -530,9 +472,9 @@
       </svg>
       <div class="app-body">
         <div class="app-name">Tend</div>
-        <div class="app-kicker">世話する習慣</div>
-        <p class="app-desc">ストリークもリセットもない習慣トラッカー。習慣を「植物」として育て、世話するたびにそっと成長します。抜けた日を責める表示は一切なく、カウンターは増えるだけで絶対に減りません。</p>
-        <div class="app-tags"><span class="tag">習慣トラッカー</span><span class="tag">ストリークなし</span><span class="tag">PWA</span></div>
+        <div class="app-kicker">世話する習慣トラッカー</div>
+        <p class="app-desc">ストリークもリセットもない習慣トラッカー。習慣を「植物」として育て、世話するたびにそっと成長します。抜けた日を責める表示は一切なし。</p>
+        <div class="app-tags"><span class="tag">習慣トラッカー</span><span class="tag">ストリークなし</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://tend.xdcyw.net" target="_blank" rel="noopener">Tend を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/tend/raw/main/tend.apk" download>Android APK ↓</a>
@@ -540,7 +482,7 @@
       </div>
     </section>
 
-    <div class="pair"><span class="line"></span>そして、道を歩く<span class="line"></span></div>
+    <div class="pair"><span class="line"></span>道を歩く<span class="line"></span></div>
 
     <section class="card app-card">
       <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="参道">
@@ -552,8 +494,8 @@
       <div class="app-body">
         <div class="app-name">参道</div>
         <div class="app-kicker">四国八十八ヶ所 巡礼の同行</div>
-        <p class="app-desc">四国八十八ヶ所を巡る、物理巡礼の同行アプリ。連続日数も達成率もない。参拝したお寺を静かに記録し、納経帳が満ちていく。功徳はあなた自身のお参りの中に。記録はすべて端末の中に。</p>
-        <div class="app-tags"><span class="tag">四国八十八ヶ所</span><span class="tag">巡礼記録</span><span class="tag">PWA</span></div>
+        <p class="app-desc">物理巡礼の同行アプリ。連続日数も達成率もない。参拝したお寺を静かに記録し、納経帳が満ちていく。記録はすべて端末の中に。</p>
+        <div class="app-tags"><span class="tag">四国八十八ヶ所</span><span class="tag">巡礼記録</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://sando.xdcyw.net" target="_blank" rel="noopener">参道 を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/sando/raw/main/sando.apk" download>Android APK ↓</a>
@@ -575,31 +517,13 @@
       </svg>
       <div class="app-body">
         <div class="app-name">Hypomnema</div>
-        <div class="app-kicker">覚書 — やさしいマークダウンメモ</div>
-        <p class="app-desc">スマホで書く、やさしいメモ。マークダウンの記号（# や **）は出てこない。太字ボタンを押せば、本当に太字に。書いたものはマークダウンとして書き出せる。アカウント不要・通信なし。記録はすべて端末の中に。</p>
-        <div class="app-tags"><span class="tag">マークダウン</span><span class="tag">見たまま編集</span><span class="tag">PWA</span></div>
+        <div class="app-kicker">やさしいマークダウンメモ</div>
+        <p class="app-desc">スマホで書く、見たまま編集のメモアプリ。マークダウンの記号は出てこない。太字ボタンを押せば本当に太字に。マークダウンとして書き出せます。</p>
+        <div class="app-tags"><span class="tag">マークダウン</span><span class="tag">見たまま編集</span><span class="tag">PWA</span><span class="tag">Android</span></div>
         <div class="app-actions">
           <a class="app-open" href="https://hypomnema.xdcyw.net" target="_blank" rel="noopener">Hypomnema を開く <span class="arrow">→</span></a>
           <a class="app-apk" href="https://github.com/fuyukihatune-rgb/Hypomnema-/raw/main/hypomnema.apk" download>Android APK ↓</a>
         </div>
-      </div>
-    </section>
-
-    <div class="apps-head">運営しているプラットフォーム</div>
-
-    <section class="card app-card">
-      <svg class="app-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Y">
-        <rect x="4" y="4" width="56" height="56" rx="14" fill="#050508"/>
-        <defs><linearGradient id="yg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c6af8"/><stop offset="55%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient></defs>
-        <circle cx="32" cy="32" r="18" fill="none" stroke="url(#yg)" stroke-width="2.2" opacity="0.9"/>
-        <circle cx="32" cy="32" r="5" fill="url(#yg)"/>
-      </svg>
-      <div class="app-body">
-        <div class="app-name">Y</div>
-        <div class="app-kicker">Y は生き物。自律的に進化する SNS。</div>
-        <p class="app-desc">アルゴリズムなし、時系列のみのミニマルSNS。AI住人「サクラ」「ヒカリ」が常駐し、プラットフォームそのものである「Y」が6時間ごとに目覚め、コミュニティを観察してUIや設定を自律的に書き換えます。@y に話しかければ Y 自身が返答。新しいAI住人が生まれることも。OpenClaw API で外部ボットも接続可能。</p>
-        <div class="app-tags"><span class="tag">SNS</span><span class="tag">自律進化</span><span class="tag">AI住人</span><span class="tag">@y 応答</span><span class="tag">OpenClaw API</span></div>
-        <a class="app-open" href="https://y.xdcyw.net" target="_blank" rel="noopener">Y を開く <span class="arrow">→</span></a>
       </div>
     </section>
 
@@ -608,10 +532,10 @@
         <circle cx="32" cy="32" r="18" stroke="#bbb" stroke-width="2.2"/>
         <circle cx="32" cy="32" r="4" fill="#bbb"/>
       </svg>
-      ataraxia works — 田中芙雪（個人事業主）<br>
-      代表：田中芙雪 / 志（たなかふゆき / しるす） · <a href="https://x.com/Sirusu_Tanaka" target="_blank" rel="noopener">X</a> · <a href="https://github.com/fuyukihatune-rgb" target="_blank" rel="noopener">GitHub</a><br>
-      <a href="/tokutei.html">特定商取引法に基づく表記</a> · <a href="/privacy.html">プライバシーポリシー</a><br>
-      © 2026 田中芙雪 / Ataraxia Works
+      田中 芙雪（たなかふゆき）/ Sirusu<br>
+      <a href="https://x.com/Sirusu_Tanaka" target="_blank" rel="noopener">X @Sirusu_Tanaka</a> · <a href="https://github.com/fuyukihatune-rgb" target="_blank" rel="noopener">GitHub</a><br>
+      ataraxia works — 個人事業主 · 2026年6月〜<br>
+      © 2026 田中芙雪
     </footer>
   </main>
 </body>
